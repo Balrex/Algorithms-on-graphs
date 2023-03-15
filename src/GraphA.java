@@ -75,8 +75,10 @@ public class GraphA {
             count--;
             int min = Integer.MAX_VALUE;
             for (int i = 0; i < visited.length; ++i)
-                if (D[i].sum < min && visited[i] != true)
+                if (D[i].sum < min && visited[i] != true){
                     tmp = i;
+                    min = D[i].sum;
+                }
         }
 
         path.add(visited.length - 1);
